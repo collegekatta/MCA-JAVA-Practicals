@@ -1,4 +1,4 @@
-# MCA-JAVA-Practicals
+# MCA-SEM-1__JAVA-Practicals
 
 #### Remaining points : 
 - Add screenshots / screens for last three programmes before converting it to PDF.
