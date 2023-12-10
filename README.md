@@ -11,3 +11,5 @@
 9. WAP of static, abstract class keyword in JAVA.
 10. Calculate area of Circle, triangle and Square using Method Overloading.
 11. Create student information form using Java AWT components (Accept Rollno, Student Name, Address, Mob no) with Save, Update and delete components.java
+12. Create SBI Bank customer information form using Java Swing components
+13. Write program of any two Layout Managers JAVA.
