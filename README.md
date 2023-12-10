@@ -1,5 +1,12 @@
 # MCA-JAVA-Practicals
 
+#### Remaining points : 
+- Add screenshots / screens for last three programmes before converting it to PDF.
+- Check out `files` folder to get editable files
+  - Check all programmes (source code), page numbers in index file. 
+
+#### Programs (.java files)
+
 1. Write a program of class addition of two numbers by using void method and without void method.
 2. Write a program of ‘This’ keyword can be used to refer current class instance variable and Method.
 3. Create a Package package1 having one class A contains msg method. Create second package mypack with class B, call msg method of A class in the second package.
@@ -13,3 +20,7 @@
 11. Create student information form using Java AWT components (Accept Rollno, Student Name, Address, Mob no) with Save, Update and delete components.java
 12. Create SBI Bank customer information form using Java Swing components
 13. Write program of any two Layout Managers JAVA.
+
+#### Files (Editable .odt files)
+- source code file
+- index file
