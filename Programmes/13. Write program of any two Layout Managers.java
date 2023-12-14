@@ -1,48 +1,96 @@
+package src;
 import javax.swing.*;
 import java.awt.*;
 
-public class LayoutManagerExample extends JFrame {
+public class CombinedLayoutManagerExample extends JFrame {
 
-    public LayoutManagerExample() {
-        // Set the layout manager for the JFrame
-        setLayout(new FlowLayout()); // FlowLayout
+    private static final long serialVersionUID = 1L;
 
-        // Creating buttons for FlowLayout
-        JButton button1 = new JButton("Button 1");
-        JButton button2 = new JButton("Button 2");
-        JButton button3 = new JButton("Button 3");
-
-        // Adding buttons to the JFrame
-        add(button1);
-        add(button2);
-        add(button3);
-
-        // Creating buttons for GridLayout
-        JButton button4 = new JButton("Button 4");
-        JButton button5 = new JButton("Button 5");
-        JButton button6 = new JButton("Button 6");
-
-        // Creating a panel with GridLayout
-        JPanel gridPanel = new JPanel(new GridLayout(2, 2)); // 2 rows, 2 columns
-
-        // Adding buttons to the GridLayout panel
-        gridPanel.add(button4);
-        gridPanel.add(button5);
-        gridPanel.add(button6);
-
-        // Adding the GridLayout panel to the JFrame
-        add(gridPanel);
-
-        // Set JFrame properties
-        setTitle("Layout Manager Example");
-        setSize(300, 200);
+	public CombinedLayoutManagerExample() {
+        setTitle("Combined Layout Manager Example");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null); // Center the frame
+        setSize(500, 300);
+
+        // Create tabs
+        JTabbedPane tabbedPane = new JTabbedPane();
+
+        // Add BorderLayout Example
+        JPanel borderLayoutPanel = createBorderLayoutExample();
+        tabbedPane.addTab("BorderLayout", borderLayoutPanel);
+
+        // Add GridLayout Example
+        JPanel gridLayoutPanel = createGridLayoutExample();
+        tabbedPane.addTab("GridLayout", gridLayoutPanel);
+
+        // Add tabs to the frame
+        add(tabbedPane);
+
+        // Set frame properties
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 
+    private JPanel createBorderLayoutExample() {
+        // Components
+        JLabel label = new JLabel("Label:");
+        JTextField textField = new JTextField();
+
+        JRadioButton maleRadio = new JRadioButton("Male");
+        JRadioButton femaleRadio = new JRadioButton("Female");
+        ButtonGroup genderGroup = new ButtonGroup();
+        genderGroup.add(maleRadio);
+        genderGroup.add(femaleRadio);
+
+        JCheckBox programmingCheckbox = new JCheckBox("Programming Languages");
+
+        JButton button = new JButton("Submit");
+
+        // Panels
+        JPanel inputPanel = new JPanel(new GridLayout(2, 2, 10, 10));
+        inputPanel.add(label);
+        inputPanel.add(textField);
+        inputPanel.add(maleRadio);
+        inputPanel.add(femaleRadio);
+
+        JPanel mainPanel = new JPanel(new BorderLayout());
+        mainPanel.add(inputPanel, BorderLayout.CENTER);
+        mainPanel.add(programmingCheckbox, BorderLayout.SOUTH);
+        mainPanel.add(button, BorderLayout.EAST);
+
+        return mainPanel;
+    }
+
+    private JPanel createGridLayoutExample() {
+        // Components
+        JLabel label = new JLabel("Label:");
+        JTextField textField = new JTextField();
+
+        JRadioButton maleRadio = new JRadioButton("Male");
+        JRadioButton femaleRadio = new JRadioButton("Female");
+        ButtonGroup genderGroup = new ButtonGroup();
+        genderGroup.add(maleRadio);
+        genderGroup.add(femaleRadio);
+
+        JCheckBox programmingCheckbox = new JCheckBox("Programming Languages");
+
+        JButton button = new JButton("Submit");
+
+        // Panels
+        JPanel inputPanel = new JPanel(new GridLayout(2, 2, 10, 10));
+        inputPanel.add(label);
+        inputPanel.add(textField);
+        inputPanel.add(maleRadio);
+        inputPanel.add(femaleRadio);
+
+        JPanel mainPanel = new JPanel(new GridLayout(3, 1, 10, 10));
+        mainPanel.add(inputPanel);
+        mainPanel.add(programmingCheckbox);
+        mainPanel.add(button);
+
+        return mainPanel;
+    }
+
     public static void main(String[] args) {
-        // Create an instance of the LayoutManagerExample class
-        SwingUtilities.invokeLater(() -> new LayoutManagerExample());
+        SwingUtilities.invokeLater(CombinedLayoutManagerExample::new);
     }
 }

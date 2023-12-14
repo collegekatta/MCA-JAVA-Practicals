@@ -1,9 +1,16 @@
 # MCA-SEM-1__JAVA-Practicals
 
-#### Remaining points : 
-- Add screenshots / screens for last three programmes before converting it to PDF.
+### Files and programms
+- PDF and editable files available in `files` directory
+- All program `.java` files available in `programmes` directory
+
+> Note : Before taking print-out please verify index number, programs, outputs, source code
+
+
+<!-- #### Remaining points : 
+- [x] Add screenshots / screens for last three programmes before converting it to PDF.
 - Check out `files` folder to get editable files
-  - Check all programmes (source code), page numbers in index file. 
+  - Check all programmes (source code), page numbers in index file.  -->
 
 #### Programs (.java files)
 
